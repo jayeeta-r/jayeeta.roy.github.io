@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayeeta Roy — Academic CV &amp; Research Portfolio</title>
+<style>
+/* =============================================
+   CSS CUSTOM PROPERTIES
+   ============================================= */
+:root {
+  --bg: #ffffff;
+  --bg-accent: #fafaf7;
+  --ink: #1a1a1a;
+  --ink-secondary: #5a5a5a;
+  --rule: #e5e5e5;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+  --max-width: 760px;
+  --base-size: 16px;
+  --line-height: 1.65;
+}
+
+[data-theme="sepia"] {
+  --bg: #f4ecd8;
+  --bg-accent: #ede4cc;
+  --ink: #2c2416;
+  --ink-secondary: #6b5c40;
+  --rule: #d8ccb0;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --bg-accent: #222222;
+  --ink: #e8e8e8;
+  --ink-secondary: #a0a0a0;
+  --rule: #2a2a2a;
+}
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--base-size);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: var(--line-height);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-serif);
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+h1 { font-size: 2.6rem; line-height: 1.15; }
+h2 { font-size: 1.35rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.2rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.45rem; }
+h3 { font-size: 1.05rem; font-weight: bold; font-family: var(--font-sans); margin-bottom: 0.25rem; }
+h4 { font-size: 0.95rem; font-style: italic; font-family: var(--font-serif); margin-bottom: 0.2rem; }
+
+p { margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* =============================================
+   LAYOUT
+   ============================================= */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* =============================================
+   NAVIGATION
+   ============================================= */
+#site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.75rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-brand {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-brand:hover {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: var(--ink-secondary);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* =============================================
+   MASTHEAD
+   ============================================= */
+#masthead {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead-name {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.masthead-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.masthead-meta a {
+  color: var(--ink-secondary);
+  text-decoration-color: transparent;
+}
+
+.masthead-meta a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+}
+
+.masthead-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 1.5rem 0;
+}
+
+.masthead-positioning {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.masthead-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+}
+
+.masthead-links a {
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+  font-size: 0.8rem;
+}
+
+sup.tba {
+  font-size: 0.65rem;
+  color: var(--ink-secondary);
+  vertical-align: super;
+  font-family: var(--font-sans);
+  font-style: normal;
+}
+
+/* =============================================
+   ABOUT
+   ============================================= */
+#about .bio {
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+/* =============================================
+   RESEARCH
+   ============================================= */
+.research-intro {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.research-threads {
+  list-style: none;
+  padding: 0;
+}
+
+.research-threads > li {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.research-threads > li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.thread-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.thread-title {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 0.3rem;
+}
+
+.thread-desc {
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  margin: 0;
+}
+
+/* =============================================
+   RESEARCH EXPERIENCE
+   ============================================= */
+.project-block {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.project-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-header {
+  margin-bottom: 0.6rem;
+}
+
+.project-role {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.project-meta {
+  font-size: 0.83rem;
+  color: var(--ink-secondary);
+  margin-top: 0.15rem;
+  font-family: var(--font-sans);
+}
+
+.project-bullets {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.6rem;
+}
+
+.project-bullets li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.93rem;
+}
+
+.project-bullets li::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+  color: var(--ink-secondary);
+}
+
+.project-status {
+  font-style: italic;
+  font-size: 0.83rem;
+  color: var(--ink-secondary);
+  margin-top: 0.4rem;
+}
+
+/* =============================================
+   PUBLICATIONS
+   ============================================= */
+.pub-group {
+  margin-bottom: 2rem;
+}
+
+.pub-group-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-secondary);
+  margin-bottom: 0.8rem;
+}
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pub-list li {
+  font-size: 0.93rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--rule);
+  line-height: 1.55;
+}
+
+.pub-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.pub-type-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink-secondary);
+  border: 1px solid var(--rule);
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+}
+
+/* =============================================
+   TWO-COLUMN ROW
+   ============================================= */
+.two-col-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .two-col-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.col-section-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-secondary);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.simple-list {
+  list-style: none;
+  padding: 0;
+}
+
+.simple-list li {
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.5;
+}
+
+.simple-list li:last-child {
+  border-bottom: none;
+}
+
+.simple-list .item-title {
+  font-weight: normal;
+  color: var(--ink);
+}
+
+.simple-list .item-meta {
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+}
+
+/* =============================================
+   COURSEWORK
+   ============================================= */
+.course-theme {
+  margin-bottom: 2.5rem;
+}
+
+.course-theme-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.course-list {
+  list-style: none;
+  padding: 0;
+}
+
+.course-list li {
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--rule);
+  font-size: 0.875rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.course-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.course-name { line-height: 1.45; }
+.course-inst { font-size: 0.78rem; color: var(--ink-secondary); margin-top: 0.1rem; }
+
+.course-meta {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.grade-badge {
+  display: inline-block;
+  border: 1px solid var(--rule);
+  padding: 0.05rem 0.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.gpa-note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+  font-style: italic;
+}
+
+/* =============================================
+   CV SECTION
+   ============================================= */
+.cv-download-block {
+  margin-bottom: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--bg-accent);
+  border: 1px solid var(--rule);
+}
+
+.cv-download-block p {
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-download:hover {
+  background-color: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.btn-download:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* CV inline content */
+.cv-section-head {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-secondary);
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.cv-entry {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.cv-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cv-entry-title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.cv-entry-meta {
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.cv-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+.cv-bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.25rem;
+}
+
+.cv-bullets li::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+  color: var(--ink-secondary);
+}
+
+.cv-skill-row {
+  font-size: 0.88rem;
+  margin-bottom: 0.6rem;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.5rem;
+}
+
+.cv-skill-label {
+  font-style: italic;
+  color: var(--ink-secondary);
+  font-size: 0.83rem;
+}
+
+.cv-ref-entry {
+  font-size: 0.88rem;
+  margin-bottom: 0.75rem;
+}
+
+.cv-ref-name {
+  font-weight: bold;
+  font-family: var(--font-serif);
+}
+
+.cv-ref-detail {
+  color: var(--ink-secondary);
+  font-size: 0.82rem;
+}
+
+/* =============================================
+   RESEARCH STATEMENT & TEACHING PHILOSOPHY
+   ============================================= */
+.prose-block {
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.prose-block p {
+  margin-bottom: 1.1rem;
+}
+
+/* =============================================
+   CONTACT
+   ============================================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-item {
+  border-top: 1px solid var(--rule);
+  padding-top: 0.75rem;
+}
+
+.contact-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.contact-value {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.contact-value a {
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+}
+
+.references-block {
+  margin-top: 2rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+}
+
+.ref-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .ref-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ref-card {
+  border-left: 1px solid var(--rule);
+  padding-left: 1rem;
+}
+
+.ref-name {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  margin-bottom: 0.15rem;
+}
+
+.ref-affil {
+  font-size: 0.78rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.ref-email {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.ref-email a {
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--rule);
+  margin-top: 0;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--ink-secondary);
+  font-family: var(--font-sans);
+}
+
+.back-to-top {
+  color: var(--ink-secondary);
+  text-decoration-color: transparent;
+  font-size: 0.78rem;
+}
+
+.back-to-top:hover {
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+}
+
+/* =============================================
+   TWEAKS PANEL
+   ============================================= */
+#tweaks-panel {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  background-color: var(--bg-accent);
+  border: 1px solid var(--rule);
+  padding: 1rem 1.1rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  min-width: 170px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+#tweaks-panel.hidden {
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+}
+
+.tweaks-label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.tweaks-row {
+  margin-bottom: 0.7rem;
+}
+
+.tweaks-row-label {
+  color: var(--ink-secondary);
+  font-size: 0.72rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tweaks-btns {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tweak-btn {
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tweak-btn:hover,
+.tweak-btn.active {
+  background-color: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.tweak-btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Tweaks hover zone */
+#tweaks-hover-zone {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  z-index: 199;
+}
+
+/* =============================================
+   PRINT STYLES
+   ============================================= */
+@media print {
+  #site-nav,
+  #tweaks-panel,
+  #tweaks-hover-zone,
+  .btn-download,
+  .back-to-top,
+  footer .back-to-top {
+    display: none !important;
+  }
+
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  section {
+    padding: 1.5rem 0;
+    page-break-inside: avoid;
+  }
+
+  h2 {
+    page-break-after: avoid;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  .masthead-name { font-size: 2.2rem; }
+
+  .cv-skill-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .course-list li {
+    grid-template-columns: 1fr;
+  }
+
+  .course-meta {
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#masthead" class="nav-brand">Jayeeta Roy</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ==================== MAIN ==================== -->
+<main>
+
+  <!-- ==================== MASTHEAD ==================== -->
+  <div id="masthead">
+    <div class="container">
+      <h1 class="masthead-name">Jayeeta Roy</h1>
+      <p class="masthead-meta">
+        Trollhattan, Sweden
+        &nbsp;&middot;&nbsp;
+        <a href="mailto:jayeeta.roy@gmail.com" target="_blank" rel="noopener noreferrer">jayeeta.roy@gmail.com</a>
+        &nbsp;&middot;&nbsp;
+        <a href="tel:+46769355813">+46 769 35 5813</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://linkedin.com/in/jayeetaroy" target="_blank" rel="noopener noreferrer">linkedin.com/in/jayeetaroy</a>
+      </p>
+      <hr class="masthead-rule">
+      <p class="masthead-positioning">"Researching the intersections of sustainability, digital governance, social equity, and Work-Integrated Learning."</p>
+      <div class="masthead-links">
+        <a href="mailto:jayeeta.roy@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+        <a href="https://linkedin.com/in/jayeetaroy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar<sup class="tba">(to be added)</sup></a>
+        <a href="#" target="_blank" rel="noopener noreferrer">ORCID<sup class="tba">(to be added)</sup></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p class="bio">
+        Jayeeta Roy is an interdisciplinary researcher with over twenty years of professional leadership experience, now based in Trollhattan, Sweden, where she is completing a second master's degree in Learning, Digitalisation and Sustainability (LeaDS) at Jonkoping University's School of Education and Communication. Her research focuses on the intersecting domains of sustainability, digital governance, social equity, and Work-Integrated Learning (WIL) — investigating how socio-technical systems and institutional structures shape the experiences and capacities of marginalised communities. Methodologically, she draws on mixed-methods research, SPSS-based statistical analysis, and NVivo-supported thematic coding, operating within theoretical frameworks that include Cultural-Historical Activity Theory (CHAT), Stakeholder Theory, and Transformative Leadership. She is actively seeking a doctoral position aligned with her interdisciplinary background, empirical track record, and commitment to practice-based, equity-centred scholarship.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== RESEARCH ==================== -->
+  <section id="research">
+    <div class="container">
+      <h2>Research</h2>
+      <p class="research-intro">
+        Jayeeta Roy's research agenda is organised around four substantive threads that are treated as analytically interdependent: developments in governance, technology, sustainability, and education operate on each other in ways that demand an integrated, cross-disciplinary approach. The threads below represent equal and mutually reinforcing lines of inquiry.
+      </p>
+      <ul class="research-threads">
+        <li>
+          <span class="thread-number">01 &mdash; Research Interest</span>
+          <div class="thread-title">Organisational Strategy and Leadership</div>
+          <p class="thread-desc">Scaling practice-based initiatives, transformative leadership, and navigating systemic contradictions during organisational or structural transitions. This thread draws on Activity Theory to map the contradictions that arise when organisations attempt to implement change from within inherited structures.</p>
+        </li>
+        <li>
+          <span class="thread-number">02 &mdash; Research Interest</span>
+          <div class="thread-title">Digitalisation, AI, and Society</div>
+          <p class="thread-desc">Socio-technical impacts of digital infrastructure and artificial intelligence on governance, education, and social inclusion. Particular attention is paid to the conditions under which AI-mediated systems expand or constrain access for structurally marginalised groups.</p>
+        </li>
+        <li>
+          <span class="thread-number">03 &mdash; Research Interest</span>
+          <div class="thread-title">Sustainability and Participatory Governance</div>
+          <p class="thread-desc">Socio-organisational approaches to sustainability transitions, stakeholder engagement, circular-economy models, and policy alignment. Empirically grounded in municipal-level governance, this thread examines how participatory processes can be designed to activate resident knowledge and agency.</p>
+        </li>
+        <li>
+          <span class="thread-number">04 &mdash; Research Interest</span>
+          <div class="thread-title">Inclusive Education and Social Justice</div>
+          <p class="thread-desc">Work-Integrated Learning (WIL), care-oriented practices, and inclusive policy frameworks for structurally marginalised populations. This thread draws on critical and decolonial perspectives to interrogate the assumptions embedded in mainstream educational policy and to foreground the methodological assets of non-traditional learners.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== RESEARCH EXPERIENCE ==================== -->
+  <section id="research-experience">
+    <div class="container">
+      <h2>Research Experience</h2>
+
+      <article class="project-block">
+        <div class="project-header">
+          <div class="project-role">Master's Thesis Research</div>
+          <div class="project-meta">Volunteer-led educational initiative, Karnataka, India &nbsp;&middot;&nbsp; 2026</div>
+        </div>
+        <ul class="project-bullets">
+          <li>Analysed care-oriented learning and AI-supported digital mediation within an initiative supporting 632 displaced Rohingya children.</li>
+          <li>Applied Cultural-Historical Activity Theory (CHAT) and a multidimensional sustainability framework to an informal educational network.</li>
+          <li>Evaluated social, ethical, and organisational sustainability considerations in grassroots digital-education models.</li>
+        </ul>
+        <p class="project-status">Status: Thesis submitted; final grading expected in late June 2026.</p>
+      </article>
+
+      <article class="project-block">
+        <div class="project-header">
+          <div class="project-role">Master's Thesis Research</div>
+          <div class="project-meta">Trollhattan Municipality, Sweden &nbsp;&middot;&nbsp; 2025</div>
+        </div>
+        <ul class="project-bullets">
+          <li>Designed citizen-centred engagement strategies for biodiversity conservation.</li>
+          <li>Applied Work-Integrated Learning (WIL), Activity Theory, and Stakeholder Theory to municipal governance.</li>
+          <li>Developed recommendations relevant to biodiversity strategy in a municipality serving more than 58,000 residents.</li>
+        </ul>
+      </article>
+
+      <article class="project-block">
+        <div class="project-header">
+          <div class="project-role">Research Intern</div>
+          <div class="project-meta">Emerald Pools, India / Sweden &nbsp;&middot;&nbsp; 2024&ndash;2025</div>
+        </div>
+        <ul class="project-bullets">
+          <li>Conducted a feasibility study on 3D concrete printing for aquatic structures.</li>
+          <li>Estimated the potential for an 80% reduction in material waste and a 40% reduction in costs.</li>
+          <li>Collaborated with researchers from the University of Oxford and IIT Madras.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ==================== PUBLICATIONS ==================== -->
+  <section id="publications">
+    <div class="container">
+      <h2>Publications</h2>
+
+      <div class="pub-group">
+        <p class="pub-group-label">Peer-Reviewed &amp; Repository</p>
+        <ul class="pub-list">
+          <li>
+            Roy, J. (2025). Urban Residents as Leaders in Biodiversity Conservation: A Work-Integrated Learning Approach. <em>University West &mdash; DiVA.</em>
+            <span class="pub-type-tag">Repository Record</span>
+          </li>
+          <li>
+            Roy, J. (2025). Feasibility of 3D Concrete Printing in Aquatic Structures. <em>Emerald Pools Research Report, India.</em>
+            <span class="pub-type-tag">Research Report</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pub-group">
+        <p class="pub-group-label">Book</p>
+        <ul class="pub-list">
+          <li>
+            Roy, J. (2024). <em>Rape: Blame It on Patriarchy and Conservatism in India.</em> Notion Press, India.
+            <span class="pub-type-tag">Book</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ACADEMIC ENGAGEMENT + TEACHING ==================== -->
+  <section id="engagement">
+    <div class="container">
+      <h2>Academic Engagement &amp; Teaching</h2>
+      <div class="two-col-row">
+
+        <div>
+          <p class="col-section-label">Academic Engagement</p>
+          <ul class="simple-list">
+            <li>
+              <div class="item-title">Presenter, Wexus Platform, Chalmers University (2025)</div>
+              <div class="item-meta">Citizen Engagement in Urban Biodiversity</div>
+            </li>
+            <li>
+              <div class="item-title">Participant, University West Research Seminars</div>
+              <div class="item-meta">2024&ndash;2025</div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="col-section-label">Teaching &amp; Mentorship</p>
+          <ul class="simple-list">
+            <li>
+              <div class="item-title">Mentor, Corporate Readiness Programme, Udayan Care</div>
+              <div class="item-meta">2011&ndash;present</div>
+            </li>
+            <li>
+              <div class="item-title">More than 100 hours of mentorship to first-generation university students.</div>
+            </li>
+            <li>
+              <div class="item-title">Workshops on communication and problem-solving.</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COURSEWORK MAP ==================== -->
+  <section id="coursework">
+    <div class="container">
+      <h2>Coursework Map</h2>
+
+      <!-- Theme 1: Degrees -->
+      <div class="course-theme">
+        <p class="course-theme-label">Degrees</p>
+        <ul class="course-list">
+          <li>
+            <div>
+              <div class="course-name">Master's Programme in Learning, Digitalisation and Sustainability (LeaDS)</div>
+              <div class="course-inst">Jonkoping University, School of Education and Communication (HLK), Sweden &nbsp;&middot;&nbsp; Aug 2025&ndash;Jun 2026 &nbsp;&middot;&nbsp; 60 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">In Progress</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Master's in Leadership in Digitalised Organisations</div>
+              <div class="course-inst">University West, Sweden &nbsp;&middot;&nbsp; Aug 2023&ndash;Jun 2025 &nbsp;&middot;&nbsp; 120 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">B</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">BA (Honours) in English and Journalism</div>
+              <div class="course-inst">University of Calcutta, India &nbsp;&middot;&nbsp; Aug 2001&ndash;Jun 2004 &nbsp;&middot;&nbsp; 165 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">Completed</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Theme 2: Sustainability -->
+      <div class="course-theme">
+        <p class="course-theme-label">Sustainability, CSR and Environmental Studies</p>
+        <ul class="course-list">
+          <li>
+            <div>
+              <div class="course-name">Biodiversity in the 21st Century</div>
+              <div class="course-inst">University of Gothenburg &nbsp;&middot;&nbsp; Sep 2025&ndash;Jan 2026 &nbsp;&middot;&nbsp; 7.5 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">VG</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Sustainable Development and CSR</div>
+              <div class="course-inst">Uppsala University &nbsp;&middot;&nbsp; Sep&ndash;Nov 2024 &nbsp;&middot;&nbsp; 5.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">4/5</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Business Law: Corporate Taxation and Sustainability</div>
+              <div class="course-inst">Lund University &nbsp;&middot;&nbsp; Sep 2024&ndash;Jan 2025 &nbsp;&middot;&nbsp; 7.5 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">B</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Social Sustainability in Product and Service Development</div>
+              <div class="course-inst">Blekinge Institute of Technology &nbsp;&middot;&nbsp; Mar&ndash;Jun 2023 &nbsp;&middot;&nbsp; 7.5 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">B</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Theme 3: Global Economy -->
+      <div class="course-theme">
+        <p class="course-theme-label">Global Economy and Research Methods</p>
+        <ul class="course-list">
+          <li>
+            <div>
+              <div class="course-name">Economic Crises and Businesses in Global History</div>
+              <div class="course-inst">Stockholm University &nbsp;&middot;&nbsp; Mar&ndash;Jun 2026 &nbsp;&middot;&nbsp; 15.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">B</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Economic History: The Global Economy</div>
+              <div class="course-inst">Lund University &nbsp;&middot;&nbsp; Sep 2024&ndash;Jan 2025 &nbsp;&middot;&nbsp; 15.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">A</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Research Methods in Social Science</div>
+              <div class="course-inst">Swedish University of Agricultural Sciences (SLU) &nbsp;&middot;&nbsp; Aug&ndash;Oct 2023 &nbsp;&middot;&nbsp; 15.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">VG</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Theme 4: Digitalisation -->
+      <div class="course-theme">
+        <p class="course-theme-label">Digitalisation, AI and Information Systems</p>
+        <ul class="course-list">
+          <li>
+            <div>
+              <div class="course-name">AI and Data Strategy</div>
+              <div class="course-inst">Halmstad University &nbsp;&middot;&nbsp; Mar&ndash;Jun 2023 &nbsp;&middot;&nbsp; 5.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">G</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Artificial Intelligence in Society</div>
+              <div class="course-inst">KTH Royal Institute of Technology &nbsp;&middot;&nbsp; Jan&ndash;Jun 2023 &nbsp;&middot;&nbsp; 9.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">P</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Strategic Information Security Management</div>
+              <div class="course-inst">Linnaeus University &nbsp;&middot;&nbsp; Mar&ndash;Jun 2023 &nbsp;&middot;&nbsp; 7.5 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">B</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Hybrid Managerial Decision-Making</div>
+              <div class="course-inst">University of Boras &nbsp;&middot;&nbsp; Apr&ndash;Jun 2024 &nbsp;&middot;&nbsp; 4.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">G</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Research Foundation on Digitalisation of Society</div>
+              <div class="course-inst">University of Gothenburg &nbsp;&middot;&nbsp; Jan&ndash;Jun 2022 &nbsp;&middot;&nbsp; 15.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">G</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Theme 5: Media -->
+      <div class="course-theme">
+        <p class="course-theme-label">Media, Communication and Critical Pedagogy</p>
+        <ul class="course-list">
+          <li>
+            <div>
+              <div class="course-name">Decolonial Feminist Thought, Activism, and Art</div>
+              <div class="course-inst">Linkoping University &nbsp;&middot;&nbsp; Jan&ndash;Jun 2026 &nbsp;&middot;&nbsp; 7.5 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">A</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Digital Technologies, Activism, and Social Movements</div>
+              <div class="course-inst">Malmo University &nbsp;&middot;&nbsp; Nov 2025&ndash;Jan 2026 &nbsp;&middot;&nbsp; 15.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">A</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">New Media Cultures</div>
+              <div class="course-inst">Linnaeus University &nbsp;&middot;&nbsp; Nov 2025&ndash;Jan 2026 &nbsp;&middot;&nbsp; 15.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">G</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Media, Communication and Sustainable Development</div>
+              <div class="course-inst">Umea University &nbsp;&middot;&nbsp; Jan&ndash;Jun 2024 &nbsp;&middot;&nbsp; 7.5 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">VG</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Film as a Research Tool</div>
+              <div class="course-inst">Linnaeus University &nbsp;&middot;&nbsp; Nov 2023&ndash;Jan 2024 &nbsp;&middot;&nbsp; 7.5 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">G</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Educating for Critical Thinking</div>
+              <div class="course-inst">Malmo University &nbsp;&middot;&nbsp; Jan&ndash;Mar 2023 &nbsp;&middot;&nbsp; 5.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">G</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Digital Media and Methods for Sampling and Analysis</div>
+              <div class="course-inst">Linnaeus University &nbsp;&middot;&nbsp; Aug 2022&ndash;Jan 2023 &nbsp;&middot;&nbsp; 7.5 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">B</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Intercultural Business Communication</div>
+              <div class="course-inst">Karlstad University &nbsp;&middot;&nbsp; Nov 2022&ndash;Jan 2023 &nbsp;&middot;&nbsp; 15.0 ECTS</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">G</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Theme 6: Certificates -->
+      <div class="course-theme">
+        <p class="course-theme-label">Professional Certificates</p>
+        <ul class="course-list">
+          <li>
+            <div>
+              <div class="course-name">Google Data Analysis</div>
+              <div class="course-inst">Google &nbsp;&middot;&nbsp; Jul 2022 &nbsp;&middot;&nbsp; Eight-module programme, seven months</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">Completed</span></div>
+          </li>
+          <li>
+            <div>
+              <div class="course-name">Google Project Management (Module 1)</div>
+              <div class="course-inst">Google &nbsp;&middot;&nbsp; Feb 2023 &nbsp;&middot;&nbsp; Certificate module, one month</div>
+            </div>
+            <div class="course-meta"><span class="grade-badge">Completed</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <p class="gpa-note">Current GPA: 4.25/5.00 (85%) across the second-cycle programme.</p>
+    </div>
+  </section>
+
+  <!-- ==================== CV SECTION ==================== -->
+  <section id="cv">
+    <div class="container">
+      <h2>Curriculum Vitae</h2>
+
+      <div class="cv-download-block">
+        <p>A formatted PDF version of this CV is available for download. The document contains the full academic and professional record presented below.</p>
+        <a href="cv.pdf" class="btn-download" download target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+      </div>
+
+      <!-- Education -->
+      <p class="cv-section-head">Education</p>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">Master's Programme in Learning, Digitalisation and Sustainability (LeaDS) &mdash; 60 ECTS</div>
+        <div class="cv-entry-meta">Jonkoping University, School of Education and Communication (HLK), Sweden &nbsp;&middot;&nbsp; Aug 2025&ndash;Jun 2026 &nbsp;&middot;&nbsp; In Progress</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">Master's in Leadership in Digitalised Organisations &mdash; 120 ECTS &nbsp;&middot;&nbsp; Grade: B</div>
+        <div class="cv-entry-meta">University West, Sweden &nbsp;&middot;&nbsp; Aug 2023&ndash;Jun 2025</div>
+        <ul class="cv-bullets">
+          <li>Thesis: "Urban Residents as Leaders in Biodiversity Conservation: A Work-Integrated Learning Approach"</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">BA (Honours) in English and Journalism &mdash; 165 ECTS</div>
+        <div class="cv-entry-meta">University of Calcutta, India &nbsp;&middot;&nbsp; Aug 2001&ndash;Jun 2004</div>
+      </div>
+
+      <!-- Research Experience -->
+      <p class="cv-section-head">Research Experience</p>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">Master's Thesis Research &mdash; Volunteer-led educational initiative, Karnataka, India</div>
+        <div class="cv-entry-meta">2026</div>
+        <ul class="cv-bullets">
+          <li>Analysed care-oriented learning and AI-supported digital mediation within an initiative supporting 632 displaced Rohingya children.</li>
+          <li>Applied Cultural-Historical Activity Theory (CHAT) and a multidimensional sustainability framework to an informal educational network.</li>
+          <li>Evaluated social, ethical, and organisational sustainability considerations in grassroots digital-education models.</li>
+          <li>Thesis submitted; final grading expected in late June 2026.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">Master's Thesis Research &mdash; Trollhattan Municipality, Sweden</div>
+        <div class="cv-entry-meta">2025</div>
+        <ul class="cv-bullets">
+          <li>Designed citizen-centred engagement strategies for biodiversity conservation.</li>
+          <li>Applied Work-Integrated Learning (WIL), Activity Theory, and Stakeholder Theory to municipal governance.</li>
+          <li>Developed recommendations for a municipality serving more than 58,000 residents.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">Research Intern &mdash; Emerald Pools, India / Sweden</div>
+        <div class="cv-entry-meta">2024&ndash;2025</div>
+        <ul class="cv-bullets">
+          <li>Conducted a feasibility study on 3D concrete printing for aquatic structures.</li>
+          <li>Estimated an 80% reduction in material waste and 40% reduction in costs.</li>
+          <li>Collaborated with researchers from the University of Oxford and IIT Madras.</li>
+        </ul>
+      </div>
+
+      <!-- Publications -->
+      <p class="cv-section-head">Publications</p>
+
+      <div class="cv-entry">
+        <ul class="cv-bullets">
+          <li>Roy, J. (2025). Urban Residents as Leaders in Biodiversity Conservation: A Work-Integrated Learning Approach. <em>University West &mdash; DiVA.</em> [Repository Record]</li>
+          <li>Roy, J. (2025). Feasibility of 3D Concrete Printing in Aquatic Structures. <em>Emerald Pools Research Report, India.</em> [Research Report]</li>
+          <li>Roy, J. (2024). <em>Rape: Blame It on Patriarchy and Conservatism in India.</em> Notion Press, India. [Book]</li>
+        </ul>
+      </div>
+
+      <!-- Academic Engagement -->
+      <p class="cv-section-head">Academic Engagement</p>
+
+      <div class="cv-entry">
+        <ul class="cv-bullets">
+          <li>Presenter, Wexus Platform, Chalmers University (2025): Citizen Engagement in Urban Biodiversity.</li>
+          <li>Participant, University West Research Seminars (2024&ndash;2025).</li>
+        </ul>
+      </div>
+
+      <!-- Teaching and Mentorship -->
+      <p class="cv-section-head">Teaching and Mentorship</p>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">Mentor &mdash; Corporate Readiness Programme, Udayan Care</div>
+        <div class="cv-entry-meta">2011&ndash;present</div>
+        <ul class="cv-bullets">
+          <li>Delivered more than 100 hours of mentorship to first-generation university students.</li>
+          <li>Conducted workshops on communication and problem-solving.</li>
+        </ul>
+      </div>
+
+      <!-- Professional Experience -->
+      <p class="cv-section-head">Selected Professional Experience (2000&ndash;2021)</p>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">Advisor &mdash; Brand and Marketing, Event Listeners Pvt Ltd, India</div>
+        <ul class="cv-bullets">
+          <li>Led a team delivering national campaigns for The Telegraph and Seagram's 100 Pipers.</li>
+          <li>Contributed to audience growth and developed marketing strategies that continued to be used by the organisation.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">Marketing Coordinator &mdash; Mudra Communications / AC Nielsen / Airtel</div>
+        <ul class="cv-bullets">
+          <li>Executed market-research and brand-strategy projects for major consumer products.</li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <p class="cv-section-head">Research and Technical Skills</p>
+
+      <div class="cv-entry">
+        <div class="cv-skill-row"><span class="cv-skill-label">Research design</span><span>Mixed-methods research; qualitative and quantitative integration; applied social-science research.</span></div>
+        <div class="cv-skill-row"><span class="cv-skill-label">Qualitative analysis</span><span>NVivo-supported thematic coding; thematic and narrative analysis; contradiction mapping; Activity Theory mapping.</span></div>
+        <div class="cv-skill-row"><span class="cv-skill-label">Quantitative analysis</span><span>SPSS-based descriptive statistics, regression, correlation analysis, and inferential statistics.</span></div>
+        <div class="cv-skill-row"><span class="cv-skill-label">Frameworks</span><span>Work-Integrated Learning (WIL); Cultural-Historical Activity Theory (CHAT); Stakeholder Theory; Transformative Leadership.</span></div>
+        <div class="cv-skill-row"><span class="cv-skill-label">Collaboration</span><span>WIL collaboration with municipal stakeholders and practice-based research partners.</span></div>
+        <div class="cv-skill-row" style="border-bottom:none;padding-bottom:0;"><span class="cv-skill-label">Academic tools</span><span>APA 7th edition; Mendeley; Zotero; Canva.</span></div>
+      </div>
+
+      <!-- Languages -->
+      <p class="cv-section-head">Languages</p>
+
+      <div class="cv-entry">
+        <p style="font-size:0.9rem;">English (Fluent) &nbsp;&middot;&nbsp; Bengali (Native) &nbsp;&middot;&nbsp; Hindi (Fluent) &nbsp;&middot;&nbsp; Swedish (Beginner)</p>
+      </div>
+
+      <!-- References -->
+      <p class="cv-section-head">Academic References</p>
+
+      <div class="cv-entry">
+        <div class="cv-ref-entry">
+          <div class="cv-ref-name">Dr Monika Hattinger</div>
+          <div class="cv-ref-detail">Associate Professor, University West</div>
+          <div class="cv-ref-email"><a href="mailto:monika.hattinger@hv.se" target="_blank" rel="noopener noreferrer">monika.hattinger@hv.se</a></div>
+        </div>
+        <div class="cv-ref-entry">
+          <div class="cv-ref-name">Prof Laurence Piper</div>
+          <div class="cv-ref-detail">Professor, University West</div>
+          <div class="cv-ref-email"><a href="mailto:laurence.piper@hv.se" target="_blank" rel="noopener noreferrer">laurence.piper@hv.se</a></div>
+        </div>
+        <div class="cv-ref-entry" style="margin-bottom:0;">
+          <div class="cv-ref-name">Prof Wayne Stephen Coetzee</div>
+          <div class="cv-ref-detail">Professor, University West</div>
+          <div class="cv-ref-email"><a href="mailto:wayne-stephen.coetzee@hv.se" target="_blank" rel="noopener noreferrer">wayne-stephen.coetzee@hv.se</a></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== RESEARCH STATEMENT ==================== -->
+  <section id="research-statement">
+    <div class="container">
+      <h2>Research Statement</h2>
+      <div class="prose-block">
+
+        <p>
+          The central claim of my research is that sustainability, digital governance, social equity, and Work-Integrated Learning cannot be studied in productive isolation from one another in the 2020s. Each domain is constituted, in part, by the others: a municipal biodiversity strategy is simultaneously a digital-governance challenge, a question of whose knowledge counts, and a test of whether practice-based learning models can survive contact with institutional inertia. My work begins from that entanglement and attempts to hold it analytically without reducing any thread to a subordinate variable of the others.
+        </p>
+
+        <p>
+          The organising question running through my current and projected research is: how do socio-technical systems &mdash; digital infrastructure, artificial intelligence, governance regimes &mdash; reshape, and in turn get reshaped by, the everyday practices of marginalised learners and workers? This is not a question that resolves cleanly at either the macro or the micro level. It requires a methodology capable of moving between structural conditions and situated activity, which is why I work primarily in a mixed-methods mode, using Cultural-Historical Activity Theory (CHAT) and Stakeholder Theory as sensitising frameworks. CHAT in particular is generative for my purposes because it foregrounds contradictions &mdash; the gaps, tensions, and breakdowns within and between activity systems &mdash; as the productive sites where change either happens or stalls. Work-Integrated Learning functions in my research both as an empirical setting and as a pedagogical commitment: it insists that knowledge is produced in the encounter between formal academic preparation and real organisational practice, not before it.
+        </p>
+
+        <p>
+          The two master's theses I have completed serve as proof-of-concept for this approach. In Trollhattan, working within a municipality of more than 58,000 residents, I investigated how citizen-centred engagement strategies for biodiversity conservation could be designed when residents are understood not as recipients of policy but as active agents within an interconnected activity system of municipal planners, ecological scientists, and community members. In Karnataka, I examined an informal educational network supporting 632 displaced Rohingya children, where care-oriented learning and AI-mediated digital tools intersected in ways that both enabled and constrained educational sustainability. The two cases share a method &mdash; engaged, practice-based, contradiction-mapping &mdash; and a stance &mdash; care-oriented, equity-centred, attentive to what gets left out when institutions optimise for efficiency rather than inclusion.
+        </p>
+
+        <p>
+          The forward agenda for doctoral work extends this line of inquiry into a longer-term comparative programme. I am most interested in how WIL-informed approaches scale &mdash; or fail to scale &mdash; when digital infrastructure and AI tools are introduced into sustainability and inclusion work at the institutional level. The Swedish and Nordic context is significant here: high state capacity, strong civic-society traditions, and ambitious sustainability commitments coexist with structural inequities in educational access and persistent questions about how AI governance frameworks engage (or disengage) marginalised communities. This agenda maps naturally onto Nordic doctoral programmes in education, sustainability studies, and digital society, where the empirical and theoretical resources for this kind of comparative, cross-sectoral inquiry are most developed. My aim is to contribute, through a sustained programme of engaged scholarship, to the evidence base for how socio-technical transitions can be made more equitable &mdash; and to the methodological conversation about how to research such transitions honestly.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TEACHING PHILOSOPHY ==================== -->
+  <section id="teaching-philosophy">
+    <div class="container">
+      <h2>Teaching Philosophy</h2>
+      <div class="prose-block">
+        <p>
+          My teaching is organised around a care-oriented pedagogy that takes seriously the relational and affective dimensions of learning alongside its cognitive ones. Drawing on my WIL-informed practice, I approach the classroom &mdash; whether formal or informal &mdash; as a site where knowledge is made in dialogue between academic frameworks and the lived expertise that every student brings from their own history of work, community, and struggle. This means holding space for contradiction and uncertainty rather than resolving them prematurely, and it means designing learning activities that are anchored in real problems rather than sanitised illustrations of theory. Critical and decolonial perspectives have fundamentally shaped how I understand knowledge production itself: the question of who gets to be cited, whose categories organise a field, and whose experience counts as data is not incidental to research education but central to it. Since 2011, I have mentored first-generation university students through Udayan Care's Corporate Readiness Programme, and what that experience has taught me above all is that non-traditional learners bring methodological and epistemological assets &mdash; skills of translation, code-switching, reading systems under pressure &mdash; that mainstream academia persistently under-uses. Good teaching, as I understand it, is precisely the practice of making those assets visible and academically legible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <p class="contact-label">Email</p>
+          <p class="contact-value"><a href="mailto:jayeeta.roy@gmail.com" target="_blank" rel="noopener noreferrer">jayeeta.roy@gmail.com</a></p>
+        </div>
+        <div class="contact-item">
+          <p class="contact-label">Phone</p>
+          <p class="contact-value"><a href="tel:+46769355813">+46 769 35 5813</a></p>
+        </div>
+        <div class="contact-item">
+          <p class="contact-label">Location</p>
+          <p class="contact-value">Trollhattan, Sweden</p>
+        </div>
+        <div class="contact-item">
+          <p class="contact-label">LinkedIn</p>
+          <p class="contact-value"><a href="https://linkedin.com/in/jayeetaroy" target="_blank" rel="noopener noreferrer">linkedin.com/in/jayeetaroy</a></p>
+        </div>
+      </div>
+
+      <div class="references-block">
+        <p class="col-section-label">Academic References</p>
+        <div class="ref-row">
+          <div class="ref-card">
+            <p class="ref-name">Dr Monika Hattinger</p>
+            <p class="ref-affil">Associate Professor, University West</p>
+            <p class="ref-email"><a href="mailto:monika.hattinger@hv.se" target="_blank" rel="noopener noreferrer">monika.hattinger@hv.se</a></p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-name">Prof Laurence Piper</p>
+            <p class="ref-affil">Professor, University West</p>
+            <p class="ref-email"><a href="mailto:laurence.piper@hv.se" target="_blank" rel="noopener noreferrer">laurence.piper@hv.se</a></p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-name">Prof Wayne Stephen Coetzee</p>
+            <p class="ref-affil">Professor, University West</p>
+            <p class="ref-email"><a href="mailto:wayne-stephen.coetzee@hv.se" target="_blank" rel="noopener noreferrer">wayne-stephen.coetzee@hv.se</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 Jayeeta Roy &nbsp;&middot;&nbsp; Last updated July 2026</span>
+    <a href="#masthead" class="back-to-top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<!-- ==================== TWEAKS PANEL ==================== -->
+<div id="tweaks-hover-zone" aria-hidden="true"></div>
+
+<div id="tweaks-panel" role="complementary" aria-label="Display settings">
+  <p class="tweaks-label">Display</p>
+
+  <div class="tweaks-row">
+    <p class="tweaks-row-label">Font Size</p>
+    <div class="tweaks-btns" role="group" aria-label="Font size options">
+      <button class="tweak-btn" id="fs-s" aria-pressed="false" title="Small font size">S</button>
+      <button class="tweak-btn active" id="fs-m" aria-pressed="true" title="Medium font size">M</button>
+      <button class="tweak-btn" id="fs-l" aria-pressed="false" title="Large font size">L</button>
+    </div>
+  </div>
+
+  <div class="tweaks-row">
+    <p class="tweaks-row-label">Theme</p>
+    <div class="tweaks-btns" role="group" aria-label="Theme options">
+      <button class="tweak-btn active" id="th-light" aria-pressed="true" title="Light theme">Light</button>
+      <button class="tweak-btn" id="th-sepia" aria-pressed="false" title="Sepia theme">Sepia</button>
+      <button class="tweak-btn" id="th-dark" aria-pressed="false" title="Dark theme">Dark</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function () {
+  'use strict';
+
+  var panel = document.getElementById('tweaks-panel');
+  var hoverZone = document.getElementById('tweaks-hover-zone');
+  var hideTimer = null;
+
+  // ---- Tweaks: show/hide ----
+  function showPanel() {
+    panel.classList.remove('hidden');
+    resetHideTimer();
+  }
+
+  function scheduleHide() {
+    hideTimer = setTimeout(function () {
+      panel.classList.add('hidden');
+    }, 5000);
+  }
+
+  function resetHideTimer() {
+    clearTimeout(hideTimer);
+    scheduleHide();
+  }
+
+  panel.addEventListener('mouseenter', function () {
+    clearTimeout(hideTimer);
+  });
+
+  panel.addEventListener('mouseleave', function () {
+    scheduleHide();
+  });
+
+  panel.addEventListener('focusin', function () {
+    clearTimeout(hideTimer);
+  });
+
+  panel.addEventListener('focusout', function () {
+    scheduleHide();
+  });
+
+  hoverZone.addEventListener('mouseenter', function () {
+    showPanel();
+  });
+
+  // Initially hide after 5 seconds
+  scheduleHide();
+
+  // ---- Font size ----
+  var fontSizes = { s: '14px', m: '16px', l: '18px' };
+  var fsBtns = { s: document.getElementById('fs-s'), m: document.getElementById('fs-m'), l: document.getElementById('fs-l') };
+
+  function setFontSize(key) {
+    document.documentElement.style.setProperty('--base-size', fontSizes[key]);
+    Object.keys(fsBtns).forEach(function (k) {
+      fsBtns[k].classList.toggle('active', k === key);
+      fsBtns[k].setAttribute('aria-pressed', k === key ? 'true' : 'false');
+    });
+    try { localStorage.setItem('jr-font-size', key); } catch (e) {}
+    resetHideTimer();
+  }
+
+  Object.keys(fsBtns).forEach(function (k) {
+    fsBtns[k].addEventListener('click', function () { setFontSize(k); });
+  });
+
+  // ---- Theme ----
+  var thBtns = {
+    light: document.getElementById('th-light'),
+    sepia: document.getElementById('th-sepia'),
+    dark: document.getElementById('th-dark')
+  };
+
+  function setTheme(key) {
+    document.documentElement.setAttribute('data-theme', key === 'light' ? '' : key);
+    Object.keys(thBtns).forEach(function (k) {
+      thBtns[k].classList.toggle('active', k === key);
+      thBtns[k].setAttribute('aria-pressed', k === key ? 'true' : 'false');
+    });
+    try { localStorage.setItem('jr-theme', key); } catch (e) {}
+    resetHideTimer();
+  }
+
+  Object.keys(thBtns).forEach(function (k) {
+    thBtns[k].addEventListener('click', function () { setTheme(k); });
+  });
+
+  // ---- Restore from localStorage ----
+  try {
+    var savedFs = localStorage.getItem('jr-font-size');
+    if (savedFs && fontSizes[savedFs]) { setFontSize(savedFs); }
+
+    var savedTheme = localStorage.getItem('jr-theme');
+    if (savedTheme && thBtns[savedTheme]) { setTheme(savedTheme); }
+  } catch (e) {}
+
+})();
+</script>
+
+</body>
+</html>
